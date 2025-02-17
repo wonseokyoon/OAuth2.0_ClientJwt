@@ -1,13 +1,11 @@
 package Clientjwt.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
+@Table(name = "user_entity")
 @Getter @Setter
 public class UserEntity {
     @Id
@@ -16,8 +14,6 @@ public class UserEntity {
 
     private String username;
     private String name;
-
     private String email;
-
     private String role;
 }
