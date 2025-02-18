@@ -33,8 +33,9 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
         else if (registrationId.equals("google")) {
 
             oAuth2Response = new GoogleResponse(oAuth2User.getAttributes());
-        }
-        else {
+        } else if (registrationId.equals("dukfeel")) {
+            oAuth2Response=new dukfeelResponse(oAuth2User.getAttributes());
+        } else {
 
             return null;
         }
